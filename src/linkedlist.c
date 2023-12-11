@@ -21,13 +21,13 @@ list_ptr list_add(sprite_t sprite, list_ptr list)
 
 int list_length(list_ptr l)
 {
-  int taille_liste = 0;
+  int len = 0;
   while(l)
   {
-    taille_liste++;
+    len++;
     l = l->next;
   }
-  return taille_liste;
+  return len;
 }
 
 void list_reverse(list_ptr * l)
@@ -46,7 +46,7 @@ void list_reverse(list_ptr * l)
 list_ptr list_clone(list_ptr list)
 {
   list_ptr mlp = malloc(sizeof(struct list_node));
-  mlp->data = list->data;
+  mlp->data = list-edata;
   mlp->next = list->next;
   return mlp;
 }
